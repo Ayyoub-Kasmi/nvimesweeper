@@ -389,13 +389,13 @@ function M.new_ui(game, open_tab)
     game_mod.place_marker()
   end, "Cycle square marker using the mouse")
 
-  util.nnoremap(buf, { "<CR>", "x" }, game_mod.reveal, "Reveal square")
+  util.nnoremap(buf, { "<CR>", config_mod.config.keys.reveal }, game_mod.reveal, "Reveal square")
   util.nnoremap(buf, "<Space>", game_mod.place_marker, "Cycle square marker")
 
-  util.nnoremap(buf, "!", function()
+  util.nnoremap(buf, config_mod.config.keys.flag, function()
     game_mod.place_marker(board_mod.SQUARE_FLAGGED)
   end, "Flag square")
-  util.nnoremap(buf, "?", function()
+  util.nnoremap(buf, config_mod.config.keys.maybe, function()
     game_mod.place_marker(board_mod.SQUARE_MAYBE)
   end, "Mark square")
 

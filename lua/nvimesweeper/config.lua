@@ -38,6 +38,12 @@ local default_config = {
     flag_wrong = "X",
     maybe = "?",
   },
+  keys = {
+    reveal = "x",
+    flag = "!",
+    cycle="<Space>",
+    maybe="?",
+  }
 }
 
 local M = {}
